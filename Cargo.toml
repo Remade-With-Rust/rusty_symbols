@@ -1,0 +1,28 @@
+[package]
+name = "rusty_symbols"
+version = "0.1.0"
+authors = ["Remade With Rust / Mata Network"]
+description = "Unicode glyph constants for Rust UIs — ASCII-safe, semantically grouped (Remade With Rust)"
+repository = "https://github.com/Remade-With-Rust/rusty_symbols"
+documentation = "https://docs.rs/rusty_symbols"
+homepage = "https://github.com/Remade-With-Rust/rusty_symbols"
+license = "MIT"
+keywords = ["unicode", "glyphs", "symbols", "dioxus", "ui"]
+categories = ["gui", "encoding", "no-std"]
+readme = "README.md"
+edition = "2021"
+rust-version = "1.73"
+exclude = [".github/*"]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[features]
+default = ["rusty-alloc"]
+# Pure-Rust global allocator via shared seam (safe to combine with sibling crates).
+rusty-alloc = ["dep:rusty_alloc_default"]
+secure = ["rusty-alloc", "rusty_alloc_default?/secure"]
+
+[dependencies]
+rusty_alloc_default = { version = "0.1", optional = true }
