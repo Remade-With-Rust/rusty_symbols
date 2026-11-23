@@ -25,4 +25,4 @@ rusty-alloc = ["dep:rusty_alloc_default"]
 secure = ["rusty-alloc", "rusty_alloc_default?/secure"]
 
 [dependencies]
-rusty_alloc_default = { version = "0.1", optional = true }
+rusty_alloc_default = { version = "0.1.6", optional = true }
