@@ -1,6 +1,6 @@
 [package]
 name = "rusty_symbols"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Remade With Rust / Mata Network"]
 description = "Unicode glyph constants for Rust UIs — ASCII-safe, semantically grouped (Remade With Rust)"
 repository = "https://github.com/Remade-With-Rust/rusty_symbols"
